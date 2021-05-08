@@ -15,6 +15,7 @@ console.log(val)  ;
 if(val){return "checked"} else {return null ;}
 }
  function countcheck(){
+
     function myDisplayer() {
         alert("Bravo!!!! , You completed 5 Tasks")
     }
@@ -22,8 +23,9 @@ if(val){return "checked"} else {return null ;}
     let Count = new Promise(function(myResolve, myReject) {
         var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
         x=markedCheckbox.length;
+        console.log(x);
    
-        if (x == 5) {
+        if (x == 95) {
         myResolve("OK");
         } 
     });
