@@ -6,11 +6,14 @@ fetch(URL)
   .then((tasks) => main.innerHTML = getListOfTasks(tasks));
 const getListOfTasks = (tasks) => {
   const names = tasks
-    .map((task) => `<li class="tbln"><input type="checkbox" onclick=countcheck() id=${task.id} class="tasktask" value=${task.title}>${task.title}</li>`)
+    .map((task) => `<li class="tbln"><input type="checkbox" onclick=countcheck() id=${task.id} ${chkchk(task.completed)} class="tasktask" value=${task.title}>${task.title}</li>`)
     .join("\n");
 return `<ul>${names}</ul>`;
 };
-
+function chkchk(val){
+console.log(val)  ;
+if(val){return "checked"} else {return null ;}
+}
  function countcheck(){
     function myDisplayer() {
         alert("Bravo!!!! , You completed 5 Tasks")
